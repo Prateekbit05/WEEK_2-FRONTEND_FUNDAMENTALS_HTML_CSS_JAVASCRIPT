@@ -16,41 +16,87 @@ This week focused on mastering the core frontend technologies: HTML5, CSS3, and 
 
 ## Project Structure
 ```
-week2-frontend/
+WEEK_2-FRONTEND_FUNDAMENTALS_HTML_CSS_JAVASCRIPT/
 │
-├── index.html                  # Main landing page
-├── products.html               # E-commerce product listing page
-├── README.md                   # This file
+├── DAY_1-HTML5_SEMANTIC-LAYOUT/
+│   ├── blog.html              # Semantic HTML blog page
+│   └── README.md              # Day 1 learnings
 │
-├── day1-html/
-│   └── blog.html              # Semantic HTML blog page
-│
-├── day2-css/
+├── DAY_2-CSS_LAYOUT_MASTERY/
 │   ├── index.html             # UI replication exercise
 │   ├── style.css              # Flexbox/Grid styling
-│   └── screenshots/           # Comparison images
+│   ├── style.css1             # Additional styles
+│   └── screenshots/
+│       ├── DESKTOP_UI.png     # Desktop view
+│       ├── MOBILE_UI.png      # Mobile view
+│       └── RESPONSIVE_UI.png  # Responsive design
 │
-├── day3-js-dom/
-│   ├── faq-accordion.html     # Interactive FAQ
-│   └── script.js              # DOM manipulation
+├── DAY_3-JS_DOM_MANIPULATION/
+│   ├── index.html             # Interactive FAQ & counter
+│   ├── script.js              # DOM manipulation logic
+│   ├── style.css              # Component styling
+│   └── screenshots/
+│       ├── closed_state.png
+│       ├── opened_state.png
+│       ├── counter(arrow_down).png
+│       ├── counter(arrow_up).png
+│       ├── counter_dropdown_and_keyevents.png
+│       ├── dropdown_opened_state.png
+│       └── dropdown_opened_state.png
 │
-├── day4-todo/
-│   ├── index.html             # Todo app
-│   ├── style.css              # Todo styling
-│   └── app.js                 # LocalStorage logic
+├── DAY_4-JS_UTILS_LOCALSTORAGE/
+│   └── todo-app/
+│       ├── index.html         # Todo app HTML
+│       ├── css/
+│       │   └── style.css      # Todo styling
+│       ├── js/
+│       │   └── app.js         # LocalStorage logic
+│       ├── logs/
+│       │   └── errors.md      # Error tracking
+│       └── Screenshots/
+│           ├── ADD_TODO/
+│           │   ├── debugging_paused.png
+│           │   ├── step_in_function.png
+│           │   ├── step_out_function.png
+│           │   ├── step_over_function.png
+│           │   └── text_added_into_function.png
+│           ├── COMPLETION_TODO/
+│           │   ├── Debugging_paused.png
+│           │   ├── step_in_function.png
+│           │   ├── step_out_function.png
+│           │   ├── step_over_function.png
+│           │   └── task_complete_todo.png
+│           ├── DELETE_TODO/
+│           │   ├── deletion_debugging_paused.png
+│           │   ├── event_deletion.png
+│           │   ├── step_into_function.png
+│           │   ├── step_out_function.png
+│           │   ├── step_over_function.png
+│           │   └── task_deleted.png
+│           └── EDIT_TODO/
+│               ├── debugging_paused.png
+│               ├── edit_task_name.png
+│               ├── step_in.png
+│               ├── step_out.png
+│               ├── step_over.png
+│               └── task_edit_prompt.png
 │
-└── assets/
+└── DAY_5-CAPSTONE_UI_AND_JS_PROJECT/
+    ├── index.html             # Main landing page
+    ├── products.html          # E-commerce product listing
     ├── css/
-    │   └── styles.css         # Main stylesheet
-    └── js/
-        └── main.js            # Main JavaScript file
+    │   └── style.css          # Main stylesheet
+    ├── js/
+    │   └── products.js        # Product fetching & filtering
+    └── screenshots/
 ```
 
 ---
 
 ## Daily Breakdown
 
-### **DAY 1 - HTML5 + Semantic Layout**
+### DAY 1 - HTML5 + Semantic Layout
+
 #### What I Learned:
 - Proper use of semantic HTML5 tags (`<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`)
 - Form elements and HTML5 validation attributes
@@ -65,7 +111,8 @@ week2-frontend/
 
 ---
 
-### **DAY 2 - CSS Layout Mastery (Flexbox + Grid)**
+### DAY 2 - CSS Layout Mastery (Flexbox + Grid)
+
 #### What I Learned:
 - CSS specificity and selector types (attribute, sibling, nth-child)
 - Box model deep dive (margin, padding, border, content)
@@ -83,7 +130,8 @@ week2-frontend/
 
 ---
 
-### **DAY 3 - JavaScript ES6 + DOM Manipulation**
+### DAY 3 - JavaScript ES6 + DOM Manipulation
+
 #### What I Learned:
 - Modern variable declarations (`let`, `const`)
 - Arrow functions and their scope
@@ -94,6 +142,8 @@ week2-frontend/
 
 #### Deliverable:
 - Interactive FAQ accordion (click to expand/collapse)
+- Counter with arrow up/down functionality
+- Dropdown menu with key events
 
 #### Code Example:
 ```javascript
@@ -111,7 +161,8 @@ document.querySelectorAll('.faq-question').forEach(question => {
 
 ---
 
-### **DAY 4 - JS Utilities + LocalStorage**
+### DAY 4 - JS Utilities + LocalStorage
+
 #### What I Learned:
 - Browser DevTools debugging (breakpoints, watch expressions)
 - Custom utility functions (debounce, throttle)
@@ -124,7 +175,9 @@ document.querySelectorAll('.faq-question').forEach(question => {
   - Add new todos
   - Edit existing todos
   - Delete todos
+  - Mark todos as complete
   - Data persists after page refresh
+- Comprehensive debugging screenshots for each operation
 
 #### Code Example:
 ```javascript
@@ -154,7 +207,8 @@ function loadTodos() {
 
 ---
 
-### **DAY 5 - Capstone: E-commerce Product Listing**
+### DAY 5 - Capstone: E-commerce Product Listing
+
 #### What I Learned:
 - Fetch API for retrieving external data
 - Asynchronous JavaScript (async/await)
@@ -165,11 +219,11 @@ function loadTodos() {
 
 #### Features Implemented:
 - Fetch products from API (https://dummyjson.com/products)
-- Display product cards with image, title, and price  
-- Search bar (real-time filtering)  
-- Sort by price (high to low / low to high)  
-- Fully responsive layout  
-Loading states and error handling  
+- Display product cards with image, title, and price
+- Search bar (real-time filtering)
+- Sort by price (high to low / low to high)
+- Fully responsive layout
+- Loading states and error handling
 
 #### Code Example:
 ```javascript
@@ -211,7 +265,7 @@ function sortByPrice(order) {
 
 ### CSS
 - Mobile-first approach simplifies responsive design
-- CSS Grid > Flexbox for complex 2D layouts
+- CSS Grid is better than Flexbox for complex 2D layouts
 - CSS custom properties (variables) improve maintainability
 - Understanding specificity prevents style conflicts
 
@@ -223,6 +277,12 @@ function sortByPrice(order) {
 - LocalStorage is synchronous—use it wisely
 - Always handle async errors with try/catch
 
+### Debugging
+- DevTools breakpoints are essential for understanding code flow
+- Step in/out/over functions help trace execution
+- Watch expressions monitor variable changes in real-time
+- Console logging is useful but strategic breakpoints are better
+
 ---
 
 ## Technologies Used
@@ -231,22 +291,31 @@ function sortByPrice(order) {
 - **JavaScript (ES6+)** - Modern syntax, DOM manipulation
 - **Fetch API** - Asynchronous data retrieval
 - **LocalStorage API** - Client-side persistence
+- **Chrome DevTools** - Debugging and performance analysis
 
 ---
 
 ## Challenges Faced & Solutions
 
 ### Challenge 1: CSS Specificity Conflicts
-**Problem:** Styles weren't applying as expected  
+**Problem:** Styles weren't applying as expected
+
 **Solution:** Used browser DevTools to inspect specificity, reorganized CSS with proper cascade order
 
 ### Challenge 2: Asynchronous Data Loading
-**Problem:** Products weren't displaying immediately  
+**Problem:** Products weren't displaying immediately
+
 **Solution:** Added loading indicators and proper async/await error handling
 
 ### Challenge 3: LocalStorage Data Corruption
-**Problem:** Invalid JSON breaking the todo app  
-**Solution:** Wrapped all localStorage operations in try/catch blocks
+**Problem:** Invalid JSON breaking the todo app
+
+**Solution:** Wrapped all localStorage operations in try/catch blocks with error logging to `logs/errors.md`
+
+### Challenge 4: Event Listener Memory Leaks
+**Problem:** Multiple event listeners being added on re-renders
+
+**Solution:** Implemented proper event listener cleanup and delegation patterns
 
 ---
 
@@ -256,6 +325,8 @@ function sortByPrice(order) {
 - Dive deeper into JavaScript design patterns
 - Study browser performance optimization
 - Explore Web APIs (Geolocation, Notifications, etc.)
+- Implement IndexedDB for more complex client-side storage
+- Add unit testing with Jest
 
 ---
 
@@ -265,5 +336,10 @@ function sortByPrice(order) {
 - [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [JavaScript.info](https://javascript.info/)
 - [DummyJSON API](https://dummyjson.com/)
+- [Chrome DevTools Documentation](https://developer.chrome.com/docs/devtools/)
 
 ---
+
+## Conclusion
+Week 2 solidified my understanding of frontend fundamentals. I now feel confident building responsive, interactive web applications using vanilla HTML, CSS, and JavaScript. The hands-on projects helped bridge the gap between theory and practical application.
+
