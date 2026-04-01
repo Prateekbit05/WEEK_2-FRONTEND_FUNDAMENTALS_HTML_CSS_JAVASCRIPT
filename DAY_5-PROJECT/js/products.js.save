@@ -1,0 +1,81 @@
+const cartCount = document.getElementById("cartCount");
+
+let products = [
+  {
+    id: 1,
+    title: "Apple",
+    price: 165,
+    category: "food",
+    image: "https://i.imgur.com/1bX5QH6.png",
+    badge: "SALE"
+  },
+  {
+    id: 2,
+    title: "Beef Steak",
+    price: 1078,
+    category: "food",
+    image: "https://i.imgur.com/4ZQZ4ZK.png",
+    badge: "NEW"
+  },
+  {
+    id: 3,
+    title: "Book - JavaScript",
+    price: 499,
+    category: "books",
+    image: "https://i.imgur.com/UH3IPXw.png"
+  }
+];
+
+function showLoader() {
+  loader.classList.remove("hidden");
+  productGrid.classList.add("hidden");
+}
+
+function hideLoader() {
+  loader.classList.add("hidden");
+  productGrid.classList.remove("hidden");
+}
+
+function renderProducts(list) {
+  productGrid.innerHTML = "";
+
+  list.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    if (p.badge) {
+      const badge = document.createElement("div");
+      badge.className = `badge ${p.badge === "NEW" ? "new" : ""}`;
+      badge.innerText = p.badge;
+      card.appendChild(badge);
+    }
+
+    card.innerHTML += `
+      <img src="${p.image}" />
+      <h3>${p.title}</h3>
+      <p class="price"><span class="currency">₹</span>${p.price.toLocaleString("en-IN")}</p>
+      <button onclick="addToCart(${p.id})">Add to Cart</button>
+    `;
+
+    productGrid.appendChild(card);
+  });
+}
+
+function addToCart(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  cartCount.innerText = cart.length;
+}
+
+function init() {
+  showLoader();
+  setTimeout(() => {
+    hideLoader();
+    renderProducts(products);
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cartCount.innerText = cart.length;
+  }, 600);
+}
+
+init();

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ISH PALACE</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <h1>ISH PALACE</h1>
+  <nav>
+    <a href="cart.html">🛒 Cart <span id="cartCount">0</span></a>
+    <button id="darkToggle">🌙</button>
+  </nav>
+</header>
+
+<section class="filters">
+  <input id="searchInput" placeholder="Search products..." />
+  <select id="categoryFilter">
+    <option value="all">All</option>
+    <option value="food">Food</option>
+    <option value="books">Books</option>
+    <option value="fashion">Fashion</option>
+  </select>
+  <select id="sortSelect">
+    <option value="">Sort</option>
+    <option value="low">Price: Low → High</option>
+    <option value="high">Price: High → Low</option>
+  </select>
+</section>
+
+<section id="productGrid" class="grid"></section>
+
+<!-- Product Modal -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal">×</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

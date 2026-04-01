@@ -1,0 +1,13 @@
+<h1>Your Cart</h1>
+<div id="cartItems"></div>
+<a href="checkout.html">Checkout</a>
+<script src="js/cart.js"></script>
+<script>
+const container = document.getElementById("cartItems");
+cart.forEach(i => {
+  const p = products.find(x => x.id === i.id);
+  container.innerHTML += `
+    <p>${p.title} × ${i.qty} = ₹${p.price*i.qty}</p>
+  `;
+});
+</script>
